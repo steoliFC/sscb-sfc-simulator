@@ -599,8 +599,8 @@ const totalTime = ((Date.now() - t0) / 1000).toFixed(1);
 console.log(`\nTotal time: ${totalTime}s`);
 
 // Salvar resultados
-fs.writeFileSync('/home/claude/paper/simulation_results.json', JSON.stringify(allResults, null, 2));
-console.log('\nResults saved to /home/claude/paper/simulation_results.json');
+fs.writeFileSync('simulation_results.json', JSON.stringify(allResults, null, 2));
+console.log('\nResults saved to simulation_results.json (same folder as simulator_sfc.js)');
 
 // ───────────────────────────────────────────────────────────────
 // RELATÓRIO — Tabelas para Secção 10
