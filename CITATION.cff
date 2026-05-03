@@ -1,12 +1,26 @@
 cff-version: 1.2.0
+message: "If you use this software, please cite the accompanying paper."
 title: "SSCB SFC Simulator"
-message: "If you use this simulator, please cite the accompanying SSRN working paper."
-type: software
+version: "2.0"
+date-released: "2026-05-03"
+license: MIT
+repository-code: "https://github.com/steoliFC/sscb-sfc-simulator"
 authors:
   - family-names: "Oliveira"
     given-names: "Estêvão"
+    email: "steoli@gmail.com"
   - family-names: "Pinto"
     given-names: "Paulo"
-year: 2026
-license: MIT
-repository-code: "https://github.com/steoliFC/sscb-sfc-simulator"
+    email: "Paulo@vinagravillage.com"
+preferred-citation:
+  type: article
+  title: "The Social Security Central Bank as a Monetary Architecture: Internal Consistency, Transitional Design, and Open-Economy Constraints"
+  authors:
+    - family-names: "Oliveira"
+      given-names: "Estêvão"
+    - family-names: "Pinto"
+      given-names: "Paulo"
+  year: 2026
+  month: 5
+  url: "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6662738"
+  notes: "Working paper available on SSRN. Version 2."
