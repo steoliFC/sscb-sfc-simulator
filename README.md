@@ -4,6 +4,8 @@ Stock-flow consistent simulator for the Social Security Central Bank (SSCB) mone
 
 **Oliveira, Estêvão, and Paulo Pinto (2026).** *The Social Security Central Bank as a Monetary Architecture: Internal Consistency, Transitional Design, and Open-Economy Constraints.*
 
+> **v2 (May 2026):** This iteration integrates four amendments following peer review by Étienne Lacroix: A2 (recalibration of Fiscal UBI and MMT comparison benchmarks toward more defensible canonical specifications), A3 (training/test split for PID stabiliser tuning), A5 (dynamic leakage function σ_leak(t) replacing constant 8% leakage), and A7 (consumption floor for deciles 1-2). A reduced parametric robustness sweep is also included (`robustness_sweep.js`). See Acknowledgements in the paper for details.
+
 ## Overview
 
 This repository contains the computational implementation used to produce the Monte Carlo results reported in §10 of the paper. The simulator implements:
@@ -46,7 +48,7 @@ Approximately 5-15 minutes on a modern laptop, depending on hardware.
 
 ```
 .
-├── simulator_sfc.js        # Main simulator (670 lines)
+├── simulator_sfc.js        # Main simulator (~700 lines, v2 specification)
 ├── simulation_results.json # Output (30,000 trajectories)
 ├── PARAMETERS.md           # Parameter documentation (Tables 9, 10, 12)
 ├── README.md               # This file
@@ -71,7 +73,7 @@ See `PARAMETERS.md` for the full parameter set with sources.
 
 ## Important caveats
 
-The empirical claims of the paper are conditional on the central calibration. Systematic parametric robustness tests (see paper §9.3) are pending and identified as the highest priority of subsequent work. Users running variants of this simulator should report any sensitivity findings as research-relevant rather than as confirmation of the paper's results.
+The empirical claims of the paper are conditional on the central calibration. A reduced two-parameter robustness sweep is reported in Appendix C.8 of the paper and can be reproduced via `robustness_sweep.js`; the full systematic robustness battery (see paper §9.3) remains pending and is identified as the highest priority of subsequent work. Users running variants of this simulator should report any sensitivity findings as research-relevant rather than as confirmation of the paper's results.
 
 The SSCB has never been implemented; this simulator is a proof-of-concept for internal consistency under documented assumptions, not empirical validation of an existing regime.
 
